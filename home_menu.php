@@ -35,7 +35,7 @@
                 <a class="nav-link " href="catalog.php?category_id=13">メンズ</a>
             </li>
             <li class="nav-item pill-1">
-                <a class="nav-link " href="mail_oder.php">通販</a>
+                <a class="nav-link " href="mail_order.php">通販</a>
             </li>
 
 
