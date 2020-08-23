@@ -59,11 +59,11 @@ include_once 'functions.php';
     }
         ?>
 
-        <div class="row mb-2">
+        
         <?php foreach($data as $row){ 
             
             ?>
-            <div class="col-md-6">
+            
                 <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative" style="height:250px">
                     <div class="col p-4 d-flex flex-column position-static ">
                     <?php if($row['id']%3==0){ ?>
@@ -78,12 +78,12 @@ include_once 'functions.php';
                     </div>
                     <div class="col-auto d-none d-lg-block">
                     <?php $youtube_id=str_replace("https://www.youtube.com/watch?v=","",$row['youtube']); ?>
-                    <img src="http://img.youtube.com/vi/<?php echo $youtube_id; ?>/default.jpg" alt="サムネイル" 　width="100px" height="250px"><br>
+                    <img src="http://img.youtube.com/vi/<?php echo $youtube_id; ?>/mqdefault.jpg" alt="サムネイル" 　width="100px" height="250px"><br>
                     </div>
                 </div>
-            </div>
+            
             <?php } ?>
-        </div> 
+        
 
        
     </main>

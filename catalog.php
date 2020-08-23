@@ -97,11 +97,11 @@ while($rowss=$result3->fetch_assoc()){//行を連想配列で返す
         <h2><?php echo $name; ?></h2>
         <br><br>
 
-        <div class="row mb-2">
+        
         <?php foreach($data as $rows){ 
             
             ?>
-            <div class="col-md-6">
+            
                 <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative" style="height:250px">
                     <div class="col p-4 d-flex flex-column position-static ">
                         <h3 class="mb-0"><?php echo  $rows['title']?></h3>
@@ -109,12 +109,12 @@ while($rowss=$result3->fetch_assoc()){//行を連想配列で返す
                     </div>
                     <div class="col-auto d-none d-lg-block">
                     <?php $youtube_id=str_replace("https://www.youtube.com/watch?v=","",$rows['youtube']); ?>
-                    <img src="http://img.youtube.com/vi/<?php echo $youtube_id; ?>/default.jpg" alt="サムネイル" 　width="100px" height="250px"><br>
+                    <img src="http://img.youtube.com/vi/<?php echo $youtube_id; ?>/mqdefault.jpg" alt="サムネイル" 　width="100px" height="250px"><br>
                     </div>
                 </div>
-            </div>
+            
             <?php } ?>
-        </div> 
+        
 
         <?php
 

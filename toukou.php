@@ -96,7 +96,7 @@ while($rowss=$result2->fetch_assoc()){//行を連想配列で返す
 
             
             <?php $youtube_id=str_replace("https://www.youtube.com/watch?v=","",$rows['youtube']); ?>
-            <img src="http://img.youtube.com/vi/<?php echo $youtube_id; ?>/default.jpg" alt="サムネイル" 　width="300px"
+            <img src="http://img.youtube.com/vi/<?php echo $youtube_id; ?>/hqdefault.jpg" alt="サムネイル" 　width="300px"
                 height="280px"><br>
             <a href="<?php echo h($row['youtube']); ?>">動画はこちらから</a>
             <br><br><br>

@@ -30,7 +30,7 @@ $rakuten_result = getRakutenResult('ヘアアクセサリー', 1000);
 
     <main role="main" class="container">
 
-        <div class="row mb-2">
+        
         <?php 
         foreach($rakuten_result as $row){ 
             
@@ -47,7 +47,7 @@ $rakuten_result = getRakutenResult('ヘアアクセサリー', 1000);
                     <img src="<?php echo $row['img']; ?>" alt="サムネイル" 　width="100%" height="250px"><br>
                     </div>
                 </div>
-            </div>
+            
             <?php } ?>
        
 
