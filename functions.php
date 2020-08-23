@@ -67,7 +67,40 @@ function cm_ck($c){
     return $cmck;
 }
 
+function getRakutenResult($keyword,$min_price){
+    $baseurl='https://app.rakuten.co.jp/services/api/IchibaItem/Search/20140222';
+    $params = array();
+    $params['applicationId'] ='1006938509987670476';
+    $params['keyword'] = urlencode_rfc3986($keyword);
+    $params['sort'] = urlencode_rfc3986('+itemPrice');
+    $params['minPrice'] = $min_price;
 
+    $canonical_string='';
+
+    foreach($params as $k => $v) {
+        $canonical_string .= '&' . $k . '=' . $v;
+    }
+
+    $canonical_string = substr($canonical_string, 1);
+    $url = $baseurl . '?' . $canonical_string;
+    $rakuten_json=json_decode(@file_get_contents($url, true));
+    
+    $items = array();
+    foreach($rakuten_json->Items as $item) {
+        $items[] = array(
+                        'name' => (string)$item->Item->itemName,
+                        'url' => (string)$item->Item->itemUrl,
+                        'img' => isset($item->Item->mediumImageUrls[0]->imageUrl) ? (string)$item->Item->mediumImageUrls[0]->imageUrl : '',
+                        'price' => (string)$item->Item->itemPrice,
+                        'shop' => (string)$item->Item->shopName,
+                        );
+    }
+    return $items;
+}
+
+function urlencode_rfc3986($str) {
+    return str_replace('%7E', '~', rawurlencode($str));
+}
 
 
 ?>

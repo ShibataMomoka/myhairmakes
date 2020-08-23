@@ -66,7 +66,13 @@ include_once 'functions.php';
             <div class="col-md-6">
                 <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative" style="height:250px">
                     <div class="col p-4 d-flex flex-column position-static ">
+                    <?php if($row['id']%3==0){ ?>
                         <strong class="d-inline-block mb-2 text-primary">ピックアップ</strong>
+                    <?php } else if($row['id']%3==1){?>
+                        <strong class="d-inline-block mb-2 text-primary">おすすめ</strong>
+                    <?php } else if($row['id']%3==2){?>
+                        <strong class="d-inline-block mb-2 text-primary"></strong>
+                    <?php }?>
                         <h3 class="mb-0"><?php echo  $row['title']?></h3>
                         <a href="toukou.php?hairmake_id=<?php echo $row['id'] ?>" >詳しく見る</a>    
                     </div>
