@@ -1,6 +1,6 @@
 <?php
 //ini_set( 'display_errors', 1 );
-phpinfo();
+ini_set('mbstring.internal_encoding' , 'UTF-8');
 ob_start();//？
 session_start();
 
