@@ -111,11 +111,8 @@ while($row3=$result3->fetch_assoc()){//行を連想配列で返す
     <div class="alert-u alert-success my-3　text-center" role="alert"><?php echo $kaijo; ?></div>
     <?php }
     unset($_SESSION['kaijo']); ?>
-    <dic class="container-fulid">
-        <div class="jumbotron jumbotron-extend mt-0">
-            <a href="home.php">ホームに戻る</a>
-        </div>
-        </div>
+        <a class="btn btn-outline-info ml-3" href="home.php" role="button">ホームに戻る</a><br><br>
+
 
 
         <?php  foreach($data as $row){ ?>
@@ -149,7 +146,7 @@ while($row3=$result3->fetch_assoc()){//行を連想配列で返す
                             <?php  foreach($data3 as $row3){ ?>
                             <h1><?php echo h($row3['title']); ?></h1>
                             <?php $youtube_id=str_replace("https://www.youtube.com/watch?v=","",$row3['youtube']); ?>
-                            <img src="http://img.youtube.com/vi/<?php echo $youtube_id; ?>/default.jpg" alt="サムネイル"
+                            <img src="http://img.youtube.com/vi/<?php echo $youtube_id; ?>/hqdefault.jpg" alt="サムネイル"
                                 　width="300px" height="280px"><br>
                             <a href="<?php echo h($row3['youtube']); ?>">動画はこちらから</a>
                             <br><br><br>
