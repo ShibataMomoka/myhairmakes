@@ -29,7 +29,7 @@ $rakuten_result = getRakutenResult('ヘアアクセサリー', 1000);
     </div>
 
     <main role="main" class="container">
-    <h2>通販</h2>
+    <h2>通販</h2><br><br>
 
         
         <?php 
