@@ -59,7 +59,7 @@ include_once 'functions.php';
     }
         ?>
 
-        <div class="row mb-2">
+        
         <?php foreach($data as $row){ 
             
             ?>
@@ -77,7 +77,7 @@ include_once 'functions.php';
                 </div>
             </div>
             <?php } ?>
-        </div> 
+        
 
        
     </main>
