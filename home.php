@@ -28,6 +28,7 @@ include_once 'functions.php';
     </div>
 
     <main role="main" class="container">
+    <h2>ホーム</h2><br><br>
 
     <?php
     if($_POST['search']!=""){

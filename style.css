@@ -249,5 +249,10 @@ body {
   z-index:11;
 }
 
+.toukou{
+  position: absolute;
+  margin-right:100;
+}
+
 
 

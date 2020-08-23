@@ -81,8 +81,8 @@ while($rowss=$result2->fetch_assoc()){//行を連想配列で返す
         ?>
     </div>
 
-    <main role="main" class="ml-sm-auto col-8 col-offset-2 px-4">
-
+    <main role="main" class="ml-sm-auto col-md-8 col-sm-10 col-offset-2 px-4">
+    <div class="toukou">
         <table class="table text-nowrap">
 
 
@@ -162,7 +162,7 @@ while($rowss=$result2->fetch_assoc()){//行を連想配列で返す
                 $mng_content=nl2br($mng_content);
                 $comment=nl2br($comment);
             ?>
-            <div>
+            
             <p>投稿者：<?php echo $username; ?></p>
             <p>コメント：<?php echo $comment; ?></p>
 
@@ -172,7 +172,7 @@ while($rowss=$result2->fetch_assoc()){//行を連想配列で返す
             </div><br><?php
             }
             if($stmt2->num_rows != 0){
-            ?><div class="text-center">
+            ?><div class="text-right">
                 <p><?php echo $username; ?>　様</p>
                 <p>返信：<?php echo $mng_content; ?></p>
             </div>
@@ -197,7 +197,7 @@ while($rowss=$result2->fetch_assoc()){//行を連想配列で返す
                     $mysqli->close();
                     ?>
         </table>
-        
+        </div>
         <br><br>
     </main>
 
