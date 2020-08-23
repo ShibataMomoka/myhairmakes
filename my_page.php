@@ -143,12 +143,13 @@ while($row3=$result3->fetch_assoc()){//行を連想配列で返す
                     <div class="tab-pane fade show active" id="item1" role="tabpanel" area-labelledby="item1-tab">
                         <div class="ml-sm-auto col-8 col-offset-2 px-4">
                         <table class="table text-nowrap ">
-                            <?php  foreach($data3 as $row3){ ?>
+                            <?php  foreach($data3 as $row3){ 
+                                $content=nl2br($row3['content']);?>
                             <h1><?php echo h($row3['title']); ?></h1>
                             <?php $youtube_id=str_replace("https://www.youtube.com/watch?v=","",$row3['youtube']); ?>
                             <img src="http://img.youtube.com/vi/<?php echo $youtube_id; ?>/hqdefault.jpg" alt="サムネイル"
                                 　width="300px" height="280px"><br>
-                            <a href="<?php echo h($row3['youtube']); ?>">動画はこちらから</a>
+                            <a href="<?php echo h($content); ?>">動画はこちらから</a>
                             <br><br><br>
                             <h2>手順</h2>
                             <div class="text-wrap"><?php echo h($row3['content']); ?></div>
